@@ -11,10 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc912108-910e-4111-9e6f-569316d1c487" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -57,7 +59,8 @@
       <workItem from="1614609883042" duration="14259000" />
       <workItem from="1614641063808" duration="4380000" />
       <workItem from="1614704301595" duration="11329000" />
-      <workItem from="1614772892543" duration="2228000" />
+      <workItem from="1614772892543" duration="5893000" />
+      <workItem from="1614877121520" duration="10251000" />
     </task>
     <servers />
   </component>
@@ -97,9 +100,10 @@
     </state>
     <state width="1899" height="305" key="GridCell.Tab.0.right/-1920.-68.1920.982/0.25.1440.875@-1920.-68.1920.982" timestamp="1614641047183" />
     <state width="1899" height="305" key="GridCell.Tab.0.right/-1920.-93.1920.1080/0.0.1440.900@-1920.-93.1920.1080" timestamp="1614610404613" />
-    <state x="-1295" y="145" width="670" height="676" key="search.everywhere.popup" timestamp="1614643649085">
-      <screen x="-1920" y="-68" width="1920" height="982" />
+    <state x="-1295" y="141" width="670" height="744" key="search.everywhere.popup" timestamp="1614897377173">
+      <screen x="-1920" y="-93" width="1920" height="1080" />
     </state>
     <state x="-1295" y="145" width="670" height="676" key="search.everywhere.popup/-1920.-68.1920.982/0.25.1440.875@-1920.-68.1920.982" timestamp="1614643649085" />
+    <state x="-1295" y="141" width="670" height="744" key="search.everywhere.popup/-1920.-93.1920.1080/0.0.1440.900@-1920.-93.1920.1080" timestamp="1614897377173" />
   </component>
 </project>

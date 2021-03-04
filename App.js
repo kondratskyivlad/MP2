@@ -1,12 +1,10 @@
 import React from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Home from "./components/home";
 import Profile from "./components/profile";
-
-// Зробити лендскейп
 
 export const TabNavigator = createMaterialBottomTabNavigator(
     {

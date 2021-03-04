@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {StyleSheet, Text, View, Switch, Dimensions} from 'react-native';
 import {LineChart, PieChart} from "react-native-chart-kit";
 import {data , labels} from '../constants/data'
 
-const styles = StyleSheet.create({
+const portrait_styles = StyleSheet.create({
     container: {
         flex: 0,
         alignItems: "center",
@@ -19,12 +19,49 @@ const styles = StyleSheet.create({
     },
 });
 
+const landscape_styles = StyleSheet.create({
+    container: {
+        flex: 0,
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginTop: '5%',
+    },
+    switch: {
+        flex: 0,
+        marginTop: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 10,
+    },
+
+});
+
+const isPortraitForSwitch = () => {
+    const dim = Dimensions.get('screen');
+    if (dim.height >= dim.width) {
+        return portrait_styles.switch
+    } else {
+        return landscape_styles.switch
+    }
+}
+
+const isPortraitForContainer = () => {
+    const dim = Dimensions.get('screen');
+    if (dim.height >= dim.width) {
+        return portrait_styles.container
+    } else {
+        return landscape_styles.container
+    }
+}
+
 const Home = () => {
+
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
     if (isEnabled) {
         return (
-            <View style={styles.container}>
+            <View style={isPortraitForContainer()}>
                 <Text>Show Line Chart</Text>
                 <Switch
                     trackColor={{ false: "#767577", true: "#767577" }}
@@ -32,7 +69,7 @@ const Home = () => {
                     ios_backgroundColor="#3e3e3e"
                     onValueChange={toggleSwitch}
                     value={isEnabled}
-                    style={styles.switch}
+                    style={isPortraitForSwitch()}
                 />
                 <PieChart
                     data={[
@@ -59,7 +96,6 @@ const Home = () => {
                         },
                     ]}
                     width={Dimensions.get('window').width - 16}
-                    // height={220}
                     height={Dimensions.get("window").height / 3}
                     chartConfig={{
                         backgroundColor: '#1cc910',
@@ -73,7 +109,7 @@ const Home = () => {
                     }}
                     style={{
                         marginVertical: 0,
-                        borderRadius: 16,
+                        borderRadius: 16
                     }}
                     accessor="percent"
                     backgroundColor="transparent"
@@ -84,7 +120,7 @@ const Home = () => {
         )
     } else {
         return (
-            <View style={styles.container}>
+            <View style={isPortraitForContainer()}>
                 <Text>Show Pie Chart</Text>
                 <Switch
                     trackColor={{ false: "#767577", true: "#81b0ff" }}
@@ -92,7 +128,7 @@ const Home = () => {
                     ios_backgroundColor="#3e3e3e"
                     onValueChange={toggleSwitch}
                     value={isEnabled}
-                    style={styles.switch}
+                    style={isPortraitForSwitch()}
                 />
                 <LineChart
                     data={{
@@ -104,14 +140,13 @@ const Home = () => {
                         ]
                     }}
                     width={Dimensions.get("window").width}
-                    // height={210}
                     height={Dimensions.get("window").height / 2}
                     yAxisInterval={1}
                     chartConfig={{
                         backgroundColor: "#f5f5f5",
                         backgroundGradientFrom: "#f5f5f5",
                         backgroundGradientTo: "#f5f5f5",
-                        decimalPlaces: 1, // optional, defaults to 2dp
+                        decimalPlaces: 1,
                         color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
                         labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
                         style: {
